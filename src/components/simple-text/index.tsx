@@ -11,8 +11,9 @@ export const SimpleText = function SimpleText({
   bold,
   color = "#333",
 }: TProps) {
+  const getFontWidth = bold ? "600" : "";
   return (
-    <StyledText bold={bold} color={color}>
+    <StyledText fontWeight={getFontWidth} color={color}>
       {text}
     </StyledText>
   );
