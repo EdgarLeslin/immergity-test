@@ -90,7 +90,7 @@ export const CanvasOptions = memo(function CanvasOptions({
         setErrorLateralLineWidth(true);
       }
     },
-    [canvasHeight, setCanvasLateralLineWidth]
+    [canvasWidth, setCanvasLateralLineWidth]
   );
 
   return (

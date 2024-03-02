@@ -1,10 +1,10 @@
 "use client";
 import styled, { css } from "styled-components";
 
-type StyledListItemProps = {
-  bold?: boolean;
+interface StyledListItemProps {
+  fontWeight?: string;
   color?: string;
-};
+}
 
 export const Header = styled.header`
   background-color: #333;
@@ -27,11 +27,7 @@ export const StyledText = styled.p<StyledListItemProps>`
   font-size: 16px;
   line-height: 1.6;
   color: ${({ color }) => color || "#333"};
-  ${({ bold }) =>
-    bold &&
-    css`
-      font-weight: bold;
-    `}
+  font-weight: ${({ fontWeight }) => fontWeight};
 `;
 
 export const StyledListContainer = styled.div`
