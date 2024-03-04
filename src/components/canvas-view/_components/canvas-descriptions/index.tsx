@@ -25,10 +25,9 @@ export const CanvasDescriptions = memo(function CanvasDescriptions({
   canvasWidth,
 }: TProps) {
   const correlationByLineWidth = canvasLineWidth * 2;
-
   const lengthLinePx =
   canvasHeight * 2 + canvasWidth * 2 + Math.abs(canvasConvexity) * 2;
-const lengthLineMm = (lengthLinePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
+  const lengthLineMm = (lengthLinePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
 
   const commonSquarePx = getSquare({
     lateralLineWidth: canvasLateralLineWidth,
@@ -37,16 +36,11 @@ const lengthLineMm = (lengthLinePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
     height: canvasHeight,
     lineWidth: canvasLineWidth,
   });
+  const commonSquareMm = (commonSquarePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
 
   const squareLine = canvasLineWidth * lengthLinePx
 
-
-
-  const commonSquareMm = (commonSquarePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
-
   const figureSquarePx = commonSquarePx - squareLine
-
-
   const figureSquareMm = (figureSquarePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
 
   const commonHeightPx = canvasHeight;
@@ -58,8 +52,6 @@ const lengthLineMm = (lengthLinePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
   const commonWidthMm = (commonWidthPx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
   const figureWidthPx = canvasWidth - correlationByLineWidth;
   const figureWidthMm = (figureWidthPx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
-
-
 
   const gaussAge = getGaussAge();
 
