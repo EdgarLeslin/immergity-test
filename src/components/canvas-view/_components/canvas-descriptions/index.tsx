@@ -34,7 +34,6 @@ export const CanvasDescriptions = memo(function CanvasDescriptions({
     convexity: canvasConvexity,
     width: canvasWidth,
     height: canvasHeight,
-    lineWidth: canvasLineWidth,
   });
   const commonSquareMm = (commonSquarePx * PX_TO_MM).toFixed(TO_FIXED_NUMBER);
 

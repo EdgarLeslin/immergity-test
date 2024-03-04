@@ -3,7 +3,6 @@ type TProps = {
   height: number;
   convexity: number;
   lateralLineWidth: number;
-  lineWidth: number;
 };
 
 export const getSquare = ({
@@ -11,7 +10,6 @@ export const getSquare = ({
   height,
   convexity,
   lateralLineWidth,
-  lineWidth,
 }: TProps): number => {
   const isConvexity = convexity <= 0;
   const convexityWidth = width - lateralLineWidth * 2;
