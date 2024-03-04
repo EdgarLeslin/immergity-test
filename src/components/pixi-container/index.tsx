@@ -121,8 +121,7 @@ export const PixiCanvas = memo(function PixiCanvas({
 
   return (
     <PixiCanvasContainer>
-      {" "}
-      <div id="canvas-container"></div>;
+      <div id="canvas-container"></div>
     </PixiCanvasContainer>
   );
 });
