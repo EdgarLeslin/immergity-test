@@ -16,16 +16,14 @@ export const getSquare = ({
   const isConvexity = convexity <= 0;
   const convexityWidth = width - lateralLineWidth * 2;
   const squareConvexity = convexityWidth * Math.abs(convexity);
-  const squareConvexityWittoutLineWidth =
-    squareConvexity - convexityWidth * lineWidth;
 
   if (isConvexity) {
     const commonSquare = width * (height + convexity);
 
-    return commonSquare + squareConvexityWittoutLineWidth;
+    return commonSquare + squareConvexity;
   } else {
     const commonSquare = width * height;
 
-    return commonSquare - Math.abs(squareConvexityWittoutLineWidth);
+    return commonSquare - squareConvexity;
   }
 };
